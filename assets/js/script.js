@@ -1,106 +1,230 @@
-// function Factorial(num){
-//     if(num==1){
-//         return 1;
-//     }
-//     else{
-//         return num*Factorial(num-1)
-//     }
-// }
+//Task1
 
-// console.log(Factorial(3));
-
-
-
-// let stu1={
+// let user1={
 //     name:"Rasul",
 //     surname: "Hasanov",
 //     age: 15
 // }
 
-// let stu2={
+// let user2={
 //     name:"Eli",
 //     surname: "Veliyev",
-//     age: 20
+//     age: 19
 // }
 
-// let stu3={
+// let user3={
 //     name:"Ugur",
 //     surname: "Quliyev",
-//     age: 32
+//     age: 21
 // }
 
-// let stu4={
+// let user4={
 //     name:"Eli",
 //     surname: "Huseynov",
 //     age: 37
 // }
 
-// let stu5={
+// let user5={
 //     name:"Emil",
 //     surname: "Allahverdili",
 //     age: 25
 // }
 
-// let students = [stu1,stu2,stu3,stu4,stu5]
+// let users = [user1,user2,user3,user4,user5]
 
-// function meanAge(arr){
-//     let ageSum=0;
+// function usersBiggerThanTwenty(arr){
+//     let date =  new Date().getFullYear();
+//     let filteredUsers=arr.filter(m=>m.age>20)
 
-//     for (const item of arr) {
-//         for (const key in item) {
-//             if (key=="age") {
-//                 ageSum+=item[key]
-//             }
-//         }
+//     for(let i=0;i<filteredUsers.length;i++){
+//         console.log(`Ad: ${filteredUsers[i].name} Soyad: ${filteredUsers[i].surname} Dogum Tarix: ${date - filteredUsers[i].age}`);
 //     }
-    
-//     console.log(ageSum/arr.length);
 // }
 
-// meanAge(students)
+// usersBiggerThanTwenty(users);
 
+//Practice
 
+// function getCount(num) {
+//   console.log(num);
 
-let user1={
-    name:"Rasul",
-    surname: "Hasanov",
-    age: 15
-}
+//   if (num > 1) {
+//     getCount(num - 1);
+//   }
+// }
 
-let user2={
-    name:"Eli",
-    surname: "Veliyev",
-    age: 19
-}
+// getCount(5);
 
-let user3={
-    name:"Ugur",
-    surname: "Quliyev",
-    age: 21
-}
+// function getSumOfNumbers(num) {
+//   if (num == 1) {
+//     return num;
+//   } else {
+//     return num + getSumOfNumbers(num - 1);
+//   }
+// }
 
-let user4={
-    name:"Eli",
-    surname: "Huseynov",
-    age: 37
-}
+// console.log(getSumOfNumbers(5));
 
-let user5={
-    name:"Emil",
-    surname: "Allahverdili",
-    age: 25
-}
+// function getFactorial(num) {
+//     if (num == 1) {
+//       return num;
+//     } else {
+//       return num*getFactorial(num - 1);
+//     }
+//   }
 
+//   console.log(getFactorial(5));
 
-let users = [user1,user2,user3,user4,user5]
+// let numbers = [1, 2, 3, 4, 5, 6];
 
-function usersBiggerThanTwenty(arr){
-    let date =  new Date().getFullYear();
-    let filteredUsers=arr.filter(m=>m.age>20)
+// numbers.forEach((element, index) => {
+// //   console.log(`Index: ${index}, Element: ${element}`);
 
-    for(let i=0;i<filteredUsers.length;i++){
-        console.log(`Ad: ${filteredUsers[i].name} Soyad: ${filteredUsers[i].surname} Dogum Tarix: ${date - filteredUsers[i].age}`);
-    }
-}
+//     numbers[index] = element*2
+// });
 
-usersBiggerThanTwenty(users);
+// console.log(numbers);
+
+// let numbers = [1, 2, 3, 4, 5, 6];
+
+// for (const item of numbers) {
+//     console.log(item);
+// }
+
+// let user = {
+//     name: "Rasul",
+//     surname: "Hasanov",
+//     age: 15
+// }
+
+// for (const key in user) {
+//     console.log(key+"/"+user[key]);
+// }
+
+// let user1 = {
+//   name: "Rasul",
+//   surname: "Hasanov",
+//   age: 15,
+//   email: "rasul@gmail.com",
+// };
+
+// let user2 = {
+//   name: "Eli",
+//   surname: "Veliyev",
+//   age: 27,
+//   email: "eli@gmail.com",
+// };
+
+// let user3 = {
+//   name: "Ugur",
+//   surname: "Quliyev",
+//   age: 21,
+//   email: "ugur@gmail.com",
+// };
+
+// let users = [user1, user2, user3];
+
+// for (const item of users) {
+//   for (const key in item) {
+//     console.log(key + "/" + item[key]);
+//   }
+// }
+
+// users.forEach((element, index) => {
+//   for (const key in element) {
+//     console.log(key + "/" + element[key] + "/" + index);
+//   }
+// });
+
+// let nums = [1,2,3,4,5,6,7,8,9]
+
+// let copyArr = [...nums]
+
+// console.log(copyArr);
+
+// let result = nums.map(m=>{
+//     return m*2;
+// })
+
+// console.log(nums);
+// console.log(result)
+
+// function getNumbers(...arr){
+//     for (const item of arr) {
+//         console.log(item);
+//     }
+// }
+
+// getNumbers(1,2,3,4,5)
+
+// const showMeanAge = (arr) => {
+//   sumOfAge = 0;
+
+//   for (const item of arr) {
+//     sumOfAge += item.age;
+//   }
+
+//   return sumOfAge / arr.length;
+// };
+
+// console.log(showMeanAge(users));
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// const checkOdd = (num) => num % 2 == 1;
+// const checkEven = (num) => num % 2 == 0;
+// const checkGreaterThanFive = (num) => num > 5;
+
+// function sumOfNumsByCondition(arr, callback) {
+//   let sum = 0;
+
+//   for (const item of arr) {
+//     if (callback(item)) {
+//       sum += item;
+//     }
+//   }
+
+//   return sum;
+// }
+
+// let result1 = sumOfNumsByCondition(numbers, checkOdd);
+// let result2 = sumOfNumsByCondition(numbers, checkEven);
+// let result3 = sumOfNumsByCondition(numbers, checkGreaterThanFive);
+
+// console.log(result1);
+// console.log(result2);
+// console.log(result3);
+
+// function checkAge(item) {
+//   return item.age > 18;
+// }
+
+// function checkName(item) {
+//   return item.name == "Rasul";
+// }
+
+// function checkEmail(item) {
+//   for (let i = 0; i < item.email.length; i++) {
+//     if (item.email[i] == "r") {
+//       return true;
+//     }
+//   }
+
+//   return false;
+// }
+
+// function getDatasByFilter(users, callback) {
+//   for (const item of users) {
+//     if (callback(item)) {
+//       console.log(`${item.name} ${item.surname}`);
+//     }
+//   }
+// }
+
+// getDatasByFilter(users, checkAge);
+
+// getDatasByFilter(users, (m) => m.age > 20);
+
+// getDatasByFilter(users, checkName);
+
+// getDatasByFilter(users, (m) => m.name == "Rasul");
